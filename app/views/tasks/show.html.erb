@@ -8,5 +8,7 @@
 
 <p>Created by: <%= link_to @task.user.name, @task.user %></p>
 
+<p><%= link_to "toggle task", task_toggle_path %></p>
+
 
 <p><%= link_to "back to see all tasks", tasks_path %></p>
