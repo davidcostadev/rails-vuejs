@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users, :tasks
+
+  get '/users/:id/tasks', to: 'users#tasks', as: :user_tasks
 end

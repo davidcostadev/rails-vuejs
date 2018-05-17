@@ -1,0 +1,11 @@
+<h1>Tasks</h1>
+
+<ul>
+    <% @tasks.each do |task| %>
+        <li><strong><%= link_to task.title, task %></strong> - <%= task.is_completed %> <%= task.due_date %></li>
+    <% end %>
+</ul>
+
+<% if @tasks.length == 0 %>
+    <p>No one task finded</p>
+<% end %>

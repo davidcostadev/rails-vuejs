@@ -1,0 +1,12 @@
+<h1>Tasks of User: <%= @user.name%></h1>
+<ul>
+    <% @user.tasks.each do |task| %>
+        <li><strong><%= link_to task.title, task %></strong> - <%= task.is_completed %> <%= task.due_date %></li>
+    <% end %>
+</ul>
+
+<% if @user.tasks.length == 0 %>
+    <p>No one task finded</p>
+<% end %>
+
+<p><%= link_to "back to user", user_path(@user) %></p>

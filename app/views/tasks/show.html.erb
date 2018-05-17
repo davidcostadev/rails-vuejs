@@ -1,0 +1,12 @@
+<h1><%= @task.title%></h1>
+
+<p><%= @task.description %></p>
+
+<p>Is completed: [<%= @task.is_completed %>]
+
+<p>Due date: <%= @task.due_date %>
+
+<p>Created by: <%= link_to @task.user.name, @task.user %></p>
+
+
+<p><%= link_to "back to see all tasks", tasks_path %></p>
