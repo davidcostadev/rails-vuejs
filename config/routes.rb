@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :users, :tasks
+  namespace :api do
+    resources :users, :tasks
 
-  get '/tasks/:id/toggle_completed', to: 'tasks#toggle_completed', as: :task_toggle
+    # get '/tasks/:id/toggle', to: 'tasks#toggle', as: :task_toggle
 
-  get '/users/:id/tasks', to: 'users#tasks', as: :user_tasks
+    get '/users/:id/tasks', to: 'users#tasks', as: :user_tasks
+  end
 end
